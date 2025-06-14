@@ -9,13 +9,13 @@ describe("Checkout Form Validation", () => {
     cy.get('[data-test="checkout"]').click();
   });
 
-  it("Verify that an error message is displayed when submitting empty form", () => {
-    cy.get('[data-test="continue"]').click();
-    cy.get('[data-test="error"]')
-      .should("be.visible")
-      .and("contain", "First Name is required");
-    cy.url().should("include", "/checkout-step-one.html");
-  });
+  // it("Verify that an error message is displayed when submitting empty form", () => {
+  //   cy.get('[data-test="continue"]').click();
+  //   cy.get('[data-test="error"]')
+  //     .should("be.visible")
+  //     .and("contain", "First Name is required");
+  //   cy.url().should("include", "/checkout-step-one.html");
+  // });
 
   it("Verify that an error message is displayed for missing fields", () => {
     // Test first name missing
