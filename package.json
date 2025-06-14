@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:run": "cypress run",
     "report:generate": "npx mochawesome-merge cypress/results/*.json > cypress/results/merged-report.json && npx marge cypress/results/merged-report.json -f report -o cypress/results",
-    "test:headless": "cypress run --browser chrome --headless"
+    "test:headless": "cypress run --browser chrome --headless --reporter mochawesome --reporter-options reportDir=cypress/results,overwrite=false,html=false,json=true"
   },
   "keywords": [],
   "author": "",
